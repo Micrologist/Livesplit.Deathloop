@@ -88,7 +88,7 @@ init
 
 update
 {
- if(settings["speedometer"]) vars.UpdateSpeedometer(current.xVel, current.yVel, false);
+	if(settings["speedometer"]) vars.UpdateSpeedometer(current.xVel, current.yVel, false);
 
     if(!String.IsNullOrEmpty(current.map) && current.map.Contains("campaign"))
     {
@@ -137,7 +137,7 @@ start
 
 gameTime
 {
-    if(vars.setGameTime)
+	if(vars.setGameTime)
 	{
 		vars.setGameTime = false;
 		return TimeSpan.FromSeconds(-vars.timeToRemove);
