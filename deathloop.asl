@@ -18,6 +18,16 @@ state("Deathloop", "2021-09-16")
     byte menuConnected : 0x3A363C4;
 }
 
+state("Deathloop", "2021-09-21")
+{
+    float xVel : 0x02D5F688, 0x8, 0x8, 0x98, 0xA0, 0x1F0, 0xB0;
+    float yVel : 0x02D5F688, 0x8, 0x8, 0x98, 0xA0, 0x1F0, 0xB4;
+    string255 map : 0x30D0B38;
+    byte someLoadFlag : 0x30D0A10;
+    long someOtherLoadFlag : 0x2D60E00;
+    byte menuConnected : 0x3A363F4;
+}
+
 startup
 {
     settings.Add("speedometer", false, "Show Speedometer");
@@ -82,6 +92,9 @@ init
             break;
         case 583708672:
             version = "2021-09-16";
+            break;
+        case 0x22363000:
+            version = "2021-09-21";
             break;
     }
 }
